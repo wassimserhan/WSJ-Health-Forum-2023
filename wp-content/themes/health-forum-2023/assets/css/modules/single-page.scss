@@ -1,0 +1,116 @@
+.section-background {
+  background-color: $white;
+}
+
+.max-width--single {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 100px 15px;
+}
+
+.post-container {
+  padding: 35px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid $septenary;
+  background-color: $quaternary;
+  @include bp(tablet_small) {
+    display: block;
+  }
+
+  &__image {
+    margin: 0px 30px 0 0;
+    width: 25%;
+    object-fit: contain;
+    align-self: flex-start;
+    @include bp(from_small_tablet) {
+      width: 30%;
+    }
+    @include bp(phone) {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+    }
+  }
+  &__text {
+    flex: 1 1 auto;
+    align-self: center;
+    width: 290px;
+    @include bp(phone) {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}
+
+.post-info__headline {
+  font-family: 'Retina Book', sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: $black;
+  margin: 0;
+  padding: 0 0 5px 0;
+
+  @include bp(tablet_small) {
+    padding: 16px 0 0;
+  }
+}
+
+.post-title {
+  font-family: 'Retina Light', sans-serif;
+  font-size: 0.8em;
+  margin: 0 0 0;
+  padding: 0 0 5px;
+  color: $black;
+}
+
+.post-title--extra {
+  padding: 0 0 10px;
+}
+
+.post-info__text {
+  font-family: 'Retina Light', sans-serif;
+  margin: 0 0 16px;
+  color: $black;
+  font-size: 0.9em;
+  line-height: 1.5rem;
+  @include bp(phone) {
+    text-align: left;
+  }
+}
+.post-info__email {
+  font-size: 0.8em;
+  padding: 8px 0;
+}
+
+.post-info__link {
+  color: $secondary;
+}
+
+.back {
+  position: relative;
+  font-family: 'Retina Light', sans-serif;
+  padding: 40px 0 10px;
+  color: $secondary;
+  cursor: pointer;
+  padding-left: 20px;
+  text-decoration: underline;
+}
+
+.single__arrow-left {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  display: block;
+  margin: 30px auto;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid $secondary;
+  border-left: 2px solid $secondary;
+}
+
+.single__arrow-left {
+  transform: rotate(-45deg);
+}

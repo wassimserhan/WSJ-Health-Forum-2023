@@ -1,0 +1,110 @@
+.footer {
+  flex-shrink: 0;
+  padding: 25px 0;
+
+  a:hover {
+    color: $secondary;
+  }
+
+  & .bar__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__nav {
+    list-style: none;
+    padding: 1rem 0;
+    display: flex;
+    padding: 16px 0;
+    justify-content: center;
+    @include bp(before_ipad) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: block;
+    font-family: 'Retina Light', sans-serif;
+    text-decoration: none;
+    color: $white;
+    font-size: 1em;
+    padding: 0.3rem 0;
+    transition: all 0.3s ease 0s;
+    text-transform: capitalize;
+  }
+
+  &__link {
+    font-family: 'Retina Light', sans-serif;
+    padding: 0 0.8em;
+    color: $white;
+    font-size: 1em;
+  }
+
+  // &__link:hover {
+  //   color: $secondary;
+  // }
+
+  &__legal {
+    text-align: center;
+    font-family: 'Retina Light', sans-serif;
+    color: $white;
+    font-size: 0.8rem;
+    padding: 16px 0;
+    @include bp(phone) {
+      padding: 0 10px;
+      margin: 0 auto;
+      line-height: 20px;
+    }
+  }
+
+  &__notices {
+    padding: 10px 0 0;
+  }
+
+  &__link {
+    font-family: 'Retina Light', sans-serif;
+    // border-right: 1px solid $white;
+    padding: 0 0.8em;
+    color: $white;
+    @include bp(phone) {
+      display: inline;
+    }
+  }
+
+  &__link:not(:first-child) {
+    border-left: 1px solid $white;
+  }
+
+  &__regulation-links a {
+    font-family: 'Retina Light', sans-serif;
+    border-left: 1px solid $white;
+    padding: 0 0.8em;
+    color: $white;
+    @include bp(phone) {
+      display: inline;
+      border: 0;
+    }
+  }
+}
+
+.btn--footer {
+  background-color: $white !important;
+  border-radius: 5px;
+  padding: 10px 26px;
+  text-align: center;
+  margin: 16px auto;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #E87E13 !important;
+    color: #000000 !important;
+  }
+}
+
+.btn--link {
+  color: $black !important;
+  display: block;
+  line-height: 15px;
+}

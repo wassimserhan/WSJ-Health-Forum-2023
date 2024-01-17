@@ -1,0 +1,108 @@
+@mixin box-shadow {
+  box-shadow: -5px 7px 15px -12px $color-black;
+}
+
+@mixin bp($name) {
+  $value: map-get($breakpoints, $name);
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  } @else {
+    @warn "The '#{$name}' breakpoint is not defined. "
+        + "Please make sure it is defined in the global.scss '$breakpoint' map.";
+  }
+}
+
+@mixin get-sprite($pos-x, $pos-y) {
+  $sprite-image: url("../img/sprite.svg");
+  $sprite-position: $pos-x $pos-y;
+
+  // Returns background
+  background: $sprite-image no-repeat $sprite-position;
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin btn-border-drawing(
+  $text-color,
+  $border-color: #ccc,
+  $hover: black,
+  $width: 2px,
+  $vertical: top,
+  $horizontal: left,
+  $duration: 0.25s
+) {
+  box-shadow: inset 0 0 0 $width $border-color;
+  color: $text-color;
+  transition: color $duration $duration/3;
+  position: relative;
+
+  &::before,
+  &::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    #{$vertical}: 0;
+    #{$horizontal}: 0;
+  }
+
+  &::before {
+    $h-side: if($horizontal == "left", "right", "left");
+
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
+  }
+
+  &::after {
+    $v-side: if($vertical == "top", "bottom", "top");
+
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+
+  &:hover {
+    color: $hover;
+
+    &::before,
+    &::after {
+      border-color: $hover;
+      transition: border-color 0s, width $duration, height $duration;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      transition-delay: 0s, 0s, $duration;
+    }
+
+    &::after {
+      transition-delay: 0s, $duration, 0s;
+    }
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .grid-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

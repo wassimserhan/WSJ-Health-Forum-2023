@@ -1,0 +1,154 @@
+.pricing {
+  padding: 40px 0;
+  background-color: $white;
+  &__max-width {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.pricing-card {
+  display: flex;
+  justify-content: center;
+  @include bp(before_ipad) {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    border: 3px solid $lightgray;
+    margin-right: 8px;
+    background-color: $white;
+    max-width: 350px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    @include bp(before_ipad) {
+      max-width: 100%;
+      margin: 0 0 20px;
+    }
+  }
+
+  &__item:nth-child(odd) > &__title {
+    background-color: $lightgray;
+    color: $black;
+  }
+
+  &__item:nth-child(even) > &__title {
+    background-color: $secondary;
+    color: $black;
+  }
+
+  &__title {
+    font-family: 'Escrow Banner Light', serif;
+    font-size: 25px;
+    padding: 1rem 0;
+  }
+
+  &__highlights {
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__fee-discount {
+    font-family: 'Retina Light', sans-serif;
+    background-color: $white;
+    color: #6e6e6e;
+    font-size: 1.2em;
+    text-decoration: line-through;
+    padding: 5px 0;
+  }
+  &__fee {
+    background-color: $white;
+    color: $black;
+    font-family: 'Escrow Banner Light', serif;
+    font-size: 2em;
+    padding: 5px 0;
+  }
+
+  &__line {
+    width: 30px;
+  }
+
+  &__detail {
+    font-family: 'Retina Light', sans-serif;
+    padding: 0.4rem 0;
+    font-weight: 600;
+    color: $black;
+    min-height: 35px;
+  }
+
+  &__date {
+    font-family: 'Retina Light', sans-serif;
+    padding: 0.4rem 0;
+  }
+
+  &__benefits-wrapper {
+    padding-bottom: 20px;
+  }
+
+  &__benefit {
+    font-family: 'Retina Light', sans-serif;
+    padding: 0.6rem 1rem;
+    font-size: 0.9em;
+    text-align: left;
+
+    &--strikethrough {
+      color: $black;
+      text-decoration: $black line-through;
+    }
+  }
+
+  &__benefits {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__benefits:nth-child(odd) {
+    background-color: $lightgray;
+  }
+
+  &__benefits:nth-child(even) {
+    background-color: $white;
+  }
+
+  &__footnotes {
+    text-align: center;
+    font-family: 'Retina Light', sans-serif;
+    font-size: 1em;
+    line-height: 26px;
+    margin: 25px auto;
+    max-width: 600px;
+  }
+}
+
+.btn--pricing {
+  margin: 0 auto 20px;
+  margin-top: auto;
+  width: 190px;
+
+  text-transform: uppercase;
+  color: $white;
+  background-color: $black;
+  border: 1px solid $white !important;
+  padding: 10px 30px;
+  font-weight: 600;
+
+  outline: none;
+}
+
+.btn--pricing a {
+  color: $white;
+  display: block;
+  line-height: 15px;
+}
+
+.benefits_wrapper {
+  min-height: 300px;
+}

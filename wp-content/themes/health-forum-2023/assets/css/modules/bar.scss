@@ -1,0 +1,123 @@
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $secondary;
+  padding: 16px 0;
+
+  &__form {
+    // display: none;
+
+
+    &--err {
+      display: none;
+      text-align: center;
+      background: $errors;
+      padding: 10px 2px;
+      color: $white;
+      font-family: 'Retina Medium', sans-serif;
+      font-size: 0.9em;
+    }
+
+    &--success {
+      display: none;
+      text-align: center;
+      background: $secondary;
+      padding: 10px 2px;
+      color: $black;
+      font-family: 'Retina Medium', sans-serif;
+      font-size: 0.9em;
+    }
+
+
+  }
+
+  &--brand {
+    background: $septenary;
+  }
+
+  @include bp(before_ipad) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 135px;
+  }
+
+  &__title {
+    font-family: 'Retina Medium', sans-serif;
+    font-size: 1em;
+    @include bp(before_ipad) {
+      padding: 0 0 10px;
+      text-align: center;
+    }
+  }
+
+  &__title--light {
+    color: $black;
+    margin-right: 16px;
+    @include bp(phone) {
+      margin-right: 0;
+      padding: 0 20px 10px;
+    }
+  }
+
+  &__input {
+    border: 1px solid $white;
+    background-color: transparent;
+    width: 260px;
+    border-radius: 5px 0 0 5px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+  }
+
+  &__input::placeholder {
+    padding-left: 7px;
+    color: $black;
+  }
+}
+
+.btn--bar {
+  color: $black;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-weight: 600;
+  &__link {
+    color: $black;
+    display: block;
+    line-height: 15px;
+  }
+
+  &:hover {
+    background-color: $black;
+
+    .btn--bar__link {
+      color: $white;
+    }
+  }
+}
+
+// .btn--bar:hover {
+//   opacity: 0.8;
+// }
+
+.btn--bar-signup {
+  font-family: 'Retina Medium', sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  border-radius: 0 5px 5px 0;
+  color: $black;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid $white;
+}

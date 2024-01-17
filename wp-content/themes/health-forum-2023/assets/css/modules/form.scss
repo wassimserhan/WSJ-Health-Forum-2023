@@ -1,0 +1,156 @@
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.form {
+  // background-color: #ddd;
+  padding: 40px 0px;
+
+  .legal {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    margin: 20px 0;
+  }
+
+  &__fig {
+    position: relative;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  &__fig--img {
+    display: block;
+    max-width: 250px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .form-description {
+    text-align: center;
+    font-family: 'Retina Extra Light', sans-serif;
+    font-size: 1em;
+    line-height: 26px;
+    padding-top: 0;
+    margin-bottom: 25px;
+  }
+
+  &__helper {
+    position: relative;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      // margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: black;
+    font-family: 'DJ5 Escrow Light Display', serif;
+    font-size: 1.1em;
+    transition: 0.3s;
+    z-index: 1;
+  }
+
+  &__input {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    color: black;
+    background-color: transparent;
+    border-width: 0;
+    border-bottom: 1px solid $senary;
+    outline: none;
+    font-family: 'DJ5 Escrow Light Display', serif;
+    font-size: 1em;
+    z-index: 2;
+    border-radius: 0;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:not(:placeholder-shown) {
+      & + .form__label {
+        bottom: 38px;
+        font-size: 0.8em;
+      }
+    }
+
+    &:focus {
+      & + .form__label {
+        bottom: 38px;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  &__select {
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $senary;
+    padding: 6px 0;
+    width: 100%;
+    font-family: 'DJ5 Escrow Light Display', serif;
+    font-size: 1.2em;
+  }
+
+  &__wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &__headline {
+      text-align: center;
+      font-family: 'Escrow Banner Light', serif;
+      font-size: 1.8em;
+      color: $black;
+      margin-bottom: 25px;
+      font-weight: 300;
+    }
+  }
+
+  .thanks {
+    min-height: 250px;
+
+    @include bp(phone) {
+      min-height: 100px;
+    }
+
+    &__headline {
+      text-align: center;
+      font-family: 'Escrow Banner Light', sans-serif;
+      font-size: 1.6em;
+      color: $black;
+    }
+
+    &__desc {
+      text-align: center;
+      font-family: 'Retina Extra Light', sans-serif;
+      font-size: 1em;
+      line-height: 26px;
+      padding: 25px 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  .reg-errors {
+    background: $errors;
+    display: none;
+    color: $white;
+    font-size: 12px;
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+}

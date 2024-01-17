@@ -1,0 +1,64 @@
+.contact {
+  // background: $white;
+  padding: 40px 0;
+
+  &__max-width {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+
+  &__headline {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Escrow Banner Light', serif;
+    font-size: 1.8em;
+    font-weight: 300;
+  }
+
+  &__heading {
+    position: relative;
+    color: $black;
+    font-family: 'DJ5 Escrow Light Display', sans-serif;
+    font-size: 1em;
+    padding: 5px 0;
+    text-transform: uppercase;
+  }
+
+  &__subheading {
+    position: relative;
+    color: $black;
+    font-family: 'Retina Light', sans-serif;
+    font-size: 1em;
+    padding: 5px 0;
+  }
+
+  &__name {
+    position: relative;
+    color: $black;
+    font-family: 'Retina Light', sans-serif;
+    font-size: 0.9em;
+    padding: 5px 0;
+  }
+
+  &__name a {
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &__link {
+    font-family: 'Retina Light', sans-serif;
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 1px;
+    border-top: 3px solid $secondary;
+    margin: 1em auto;
+    padding: 0;
+  }
+}

@@ -1,0 +1,112 @@
+.event-highlights {
+  padding-bottom: 45px;
+  .carousel-wrapper__heading {
+    padding: 40px 0;
+    color: $black;
+  }
+
+  .carousel-wrapper {
+    padding: 0;
+    max-width: 780px;
+
+    .flickity-prev-next-button.previous {
+      left: -50px;
+    }
+    .flickity-prev-next-button.next {
+      right: -50px;
+    }
+
+    .carousel .flickity-button {
+      color: $black;
+    }
+
+    .carousel-cell-single {
+      height: 470px;
+      @include bp(before_ipad) {
+        height: 235px;
+      }
+
+      .caption {
+        position: absolute;
+        bottom: 0;
+        font-family: 'Retina Light';
+        font-size: 0.9em;
+        line-height: 25px;
+        @include bp(from_small_tablet) {
+          left: 0;
+        }
+
+        &.mobile-hide {
+          @include bp(before_ipad) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .carousel-main {
+      .carousel-cell-image {
+        height: 93%;
+        @include bp(before_ipad) {
+          height: 90%;
+        }
+      }
+    }
+  }
+
+  .carousel {
+    margin: 0 auto;
+  }
+
+  .carousel-cell {
+    &__video {
+      width: 100%;
+      height: 93%;
+      position: absolute;
+      top: 0;
+      @include bp(before_ipad) {
+        height: 90%;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .carousel-nav {
+    padding-top: 20px;
+
+    .carousel-cell {
+      height: 100px;
+      width: 140px;
+      opacity: 0.6;
+
+      @include bp(before_ipad) {
+        height: 60px;
+        width: 90px;
+      }
+
+      &.is-nav-selected {
+        border: 2px solid $secondary;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    position: relative;
+    //   height: 400px;
+
+    @include bp(before_ipad) {
+      height: auto;
+    }
+  }
+}

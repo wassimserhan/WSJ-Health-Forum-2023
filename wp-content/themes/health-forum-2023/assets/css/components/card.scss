@@ -1,0 +1,80 @@
+//card
+.card {
+  &__image {
+    margin: 0;
+    position: relative;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+  }
+
+  &__image--featured {
+    width: 250px;
+    height: 250px;
+  }
+
+  &__featured {
+    padding: 2rem 0 0;
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+
+  &__image:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(238, 170, 23, 0.262);
+    border-radius: 5px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+
+  &__image:hover:after {
+    opacity: 1;
+  }
+
+  &__image--round:after {
+    border-radius: 100px;
+  }
+
+  &__image--round {
+    border-radius: 50px;
+  }
+
+  &__header {
+    color: $black;
+  }
+
+  &__header-featured {
+    text-align: center;
+    color: $black;
+  }
+
+  &__title {
+    font-family: 'Escrow Text Roman', serif;
+    font-size: 1.125em;
+    padding: 16px 0 10px;
+    font-weight: 100;
+  }
+
+  &__subtitle {
+    font-family: 'Retina Light', sans-serif;
+    font-size: 0.9em;
+    padding: 0 0 5px;
+  }
+
+  &__subtitle--extra {
+    padding: 10px 0 0;
+  }
+}

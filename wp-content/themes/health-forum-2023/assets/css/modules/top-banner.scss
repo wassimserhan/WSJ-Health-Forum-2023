@@ -1,0 +1,17 @@
+.top-banner {
+  position: relative;
+  display: flex;
+  background-color: $secondary;
+  justify-content: center;
+  width: 100%;
+
+  &__item {
+    font-family: 'Retina Book', sans-serif;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 1.3px;
+
+  }
+}

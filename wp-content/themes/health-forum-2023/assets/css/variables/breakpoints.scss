@@ -1,0 +1,64 @@
+// Breakpoints
+// ---------------------------------------------
+$breakpoints: (
+  phone_small: (
+    max-width: 375px
+  ),
+  phone: (
+    max-width: 479px
+  ),
+  tablet_small: (
+    max-width: 639px
+  ),
+  before_ipad: (
+    max-width: 767px
+  ),
+  custom_screen: (
+    max-width: 936px
+  ),
+  tablet: (
+    max-width: 1023px
+  ),
+  ipad_pro: (
+    max-width: 1025px
+  ),
+  custom_laptop: (
+    max-width: 1200px
+  ),
+  custom_laptop_break: (
+    max-width: 1280px
+  ),
+  custom_large_laptop_break: (
+    max-width: 1500px
+  ),
+  custom_desktop_small: (
+    max-width: 1104px
+  ),
+  from_xssmall_tablet: (
+    min-width: 410px
+  ),
+  from_custom_tablet: (
+    min-width: 639px
+  ),
+  from_small_tablet: (
+    min-width: 768px
+  ),
+  custom_tablet: (
+    min-width: 860px
+  ),
+  desktop: (
+    min-width: 1024px
+  ),
+  custom_desktop: (
+    min-width: 1201px
+  ),
+  widescreen: (
+    min-width: 1280px
+  ),
+  largescreen: (
+    min-width: 1500px
+  )
+);
+
+$tablet: 640px;
+$desktop: 1024px;

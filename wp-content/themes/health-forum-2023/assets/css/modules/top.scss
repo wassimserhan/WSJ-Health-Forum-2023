@@ -1,0 +1,21 @@
+.scroll-button {
+  display: none;
+  position: fixed;
+  bottom: 14%;
+  left: 4%;
+  z-index: 8;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__scroll-arrow {
+    margin: 0 auto;
+    width: 40px;
+  }
+  &__p {
+    margin-top: 10px;
+    font-family: 'Retina Book';
+    font-size: 1rem;
+  }
+}

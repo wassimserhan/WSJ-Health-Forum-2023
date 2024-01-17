@@ -1,0 +1,53 @@
+.custom-form {
+    padding: 45px 0px;
+
+    .form {
+        padding: 0;
+
+        &__input, &__label {
+            font-family: 'Retina Light', serif;
+        }
+    }
+
+    &__wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        // padding: 0 15px;
+
+        &__headline {
+            text-align: center;
+            font-family: 'Escrow Banner Light', serif;
+            font-size: 1.8em;
+            color: $black;
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        .select {
+            font-family: 'Retina Light', serif;
+        }
+        
+        .styledSelect {
+            font-family: 'Retina Light', serif;
+        }
+
+        .legal a {
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+
+    .videos-form {
+
+        &__headline {
+            font-family: 'Retina Book', serif;
+            font-size: 1.4em;
+        }
+
+        &__description {
+            font-family: 'Retina Light', serif;
+        }
+
+
+    }
+}

@@ -1,0 +1,439 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  // overflow-x: hidden;
+}
+
+body {
+  font-family: 'Retina Light';
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.main-container {
+  width: 100%;
+  flex: 1 0 auto;
+  margin-top: 78px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.max-width {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.dark-underline {
+  position: relative;
+  padding: 0 0 26px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    height: 0;
+    width: 4rem;
+    border-bottom: 1px solid $senary;
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+  }
+}
+
+.dark-underline-top {
+  position: relative;
+  padding: 26px 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    height: 0;
+    width: 4rem;
+    border-bottom: 1px solid $senary;
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+  }
+}
+
+.black-bg {
+  background-color: $lightgray;
+}
+
+.white-bg {
+  background-color: $white;
+}
+
+.gray-bg {
+  background-color: $lightgray;
+}
+
+.dark-gray-bg {
+  background-color: $quaternary;
+}
+
+.olive-bg {
+  background-color: $quinary;
+}
+
+.light-olive-bg {
+  background-color: $quinary;
+}
+
+.dark-olive-bg {
+  background-color: $tertiary;
+}
+
+.primary-bg {
+  background-color: $primary;
+}
+
+.secondary-bg {
+  background-color: $secondary;
+}
+
+.tertiary-bg {
+  background-color: $tertiary;
+}
+
+.dark-background-opacity {
+  background-color: rgba(26, 26, 26, 0.5);
+}
+
+.light-background-opacity {
+  background-color: rgba(213, 213, 213, 0.26);
+}
+
+// This css adds a gradient shade on left and right side of the div
+.black-bg-sides {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0) 38%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, rgba(0, 0, 0, 0.78)),
+    color-stop(38%, rgba(0, 0, 0, 0)),
+    color-stop(100%, rgba(0, 0, 0, 0.6))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0) 38%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0) 38%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0) 38%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  /* IE10+ */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0) 38%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  /* W3C */
+  filter: unquote(
+    "progid: DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=1)"
+  );
+  /* IE6-9 */
+}
+
+.black-bg-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(0, 0, 0, 0)),
+    color-stop(100%, rgba(0, 0, 0, 0.6))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ); /* W3C */
+  filter: unquote(
+    "progid: DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='#000000', GradientType=1)"
+  );
+  /* IE6-9 */
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.round-image {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.light-underline {
+  position: relative;
+  padding: 26px 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    height: 0;
+    width: 4rem;
+    border-bottom: 1px solid $secondary;
+    transition: width 0.3s ease;
+  }
+}
+
+// being used for past event css start
+
+@include bp(ipad_pro) {
+  .custom-col-10-md {
+    width: 80%;
+  }
+}
+
+@include bp(from_small_tablet) {
+  .custom-col-3-md {
+    width: 25%;
+  }
+
+  .custom-col-5-md {
+    width: 40%;
+  }
+
+  .custom-col-6-md {
+    width: 50%;
+  }
+
+  .custom-col-11-md {
+    width: 90%;
+  }
+
+  .custom-col-12-md {
+    width: 100%;
+  }
+}
+
+.display-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+@include bp(tablet) {
+  .custom-col-4-md {
+    width: 33%;
+  }
+}
+
+@include bp(before_ipad) {
+  .custom-col-12-sm {
+    width: 100%;
+  }
+
+  .custom-col-9-sm {
+    width: 72%;
+  }
+
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+
+  .form-first-select-mobile {
+    margin-bottom: 15px;
+  }
+}
+
+@include bp(custom_tablet) {
+  .custom-col-12-md-lg {
+    width: 100%;
+  }
+}
+
+@include bp(desktop) {
+  .custom-col-12-lg {
+    width: 100%;
+  }
+}
+
+.custom-height-2 {
+  height: 50%;
+}
+// being used for past event css end
+
+// custom card width depending on the module start
+.custom-speaker-width {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.custom-supporters-width {
+  height: 115px;
+  width: 180px;
+  padding: 12px 20px;
+}
+
+.custom-event-width {
+  height: auto;
+  width: 100%;
+  padding: 12px 20px;
+}
+// custom card width end
+
+.always-hide {
+  display: none !important;
+}
+
+//Hide broken image placeholder while lazyloading
+img[src=''],
+img:not([src]) {
+  visibility: hidden;
+}
+
+.bar-bg {
+  font-family: 'Retina Medium', sans-serif;
+  color: $white;
+  background: $tertiary;
+  // padding: 12px 0 0;
+  text-align: center;
+  height: 60px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $tertiary;
+  &:hover {
+    background-color: $white;
+    color: $black;
+
+    .button-down:after {
+      border-top: 2px solid $black;
+      border-left: 2px solid $black;
+    }
+  }
+}
+
+.button-down {
+  position: relative;
+  margin: 0 auto;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
+
+.button-down:hover {
+  top: 3px;
+  transform: translate3d(0, 5px, 0);
+}
+
+.button-down::after {
+  content: '';
+  position: absolute;
+  // left: -5px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid $white;
+  border-left: 2px solid $white;
+  top: 0;
+  left: 0;
+}
+
+.button-down::after {
+  transform: rotate(225deg);
+}
+
+.button-up::after {
+  top: 10px;
+  transform: rotate(45deg);
+}

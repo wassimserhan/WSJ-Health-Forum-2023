@@ -1,0 +1,208 @@
+.speakers {
+  // background: #f1f1f1;
+  padding: 20px 0 0;
+  position: relative;
+
+  &__max-width {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 25px;
+    @include bp(before_ipad) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__card {
+    width: 22%;
+    margin: 40px 10px 10px 10px;
+    @include bp(before_ipad) {
+      width: 40%;
+    }
+
+    @include bp(phone_small) {
+      width: 50%;
+    }
+
+    .card__image {
+      width: 90%;
+      height: auto;
+    }
+
+    &:hover {
+      .card__title {
+        color: $secondary;
+      }
+    }
+  }
+
+  &__headline {
+    text-align: center;
+    font-family: 'Escrow Banner Light', serif;
+    font-size: 1.8em;
+    color: $black;
+    font-weight: 300;
+    padding-top: 20px;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 20px;
+    // margin: 10px;
+    justify-content: center;
+    text-align: center;
+    @include bp(before_ipad) {
+      justify-content: center;
+    }
+  }
+
+  //Dual Featured
+  &__wrapper-featured {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  &__featured {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px;
+    @include bp(before_ipad) {
+      flex-direction: column;
+    }
+  }
+
+  &__card-featured {
+    width: 38%;
+    margin: 0 20px;
+    @include bp(before_ipad) {
+      width: 69%;
+      margin: auto;
+    }
+    @include bp(phone_small) {
+      width: 85%;
+      margin: auto;
+    }
+  }
+
+  &__bar-view {
+    &__arrows {
+      background: $secondary;
+    }
+  }
+}
+
+// Multiday
+
+.speakers__multiday {
+  display: none;
+  text-align: center;
+}
+
+.speakers__multi-headline {
+  display: flex;
+  justify-content: center;
+  @include bp(before_ipad) {
+    display: block;
+  }
+}
+
+.speakers__day {
+  font-family: 'Retina', sans-serif;
+  padding-top: 10px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  @include bp(before_ipad) {
+    font-size: 1.3em;
+    color: $senary;
+  }
+}
+
+.arrow-buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.arrow-right,
+.arrow-left {
+  display: block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.arrow-right {
+  border-top: 2px solid $black;
+  border-left: 2px solid $black;
+}
+
+.arrow-left {
+  border-top: 2px solid $senary;
+  border-left: 2px solid $senary;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 45px;
+  right: 28px;
+  transform: rotate(135deg);
+}
+
+.arrow-left {
+  position: absolute;
+  top: 45px;
+  left: 28px;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+.next-day,
+.prev-day {
+  font-size: 0.8em;
+  font-family: 'Retina', sans-serif;
+  color: $black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.prev-day {
+  position: absolute;
+  left: 50px;
+  top: 45px;
+  color: $black;
+  pointer-events: none;
+}
+
+.next-day {
+  position: absolute;
+  right: 50px;
+  top: 45px;
+}
+
+.dark-underline--speaker {
+  position: relative;
+  padding: 26px 0;
+  @include bp(before_ipad) {
+    padding: 0 0 26px;
+  }
+}
+
+.dark-underline--speaker:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  height: 0;
+  width: 4rem;
+  border-bottom: 1px solid $black;
+  transition: width 0.3s ease;
+}

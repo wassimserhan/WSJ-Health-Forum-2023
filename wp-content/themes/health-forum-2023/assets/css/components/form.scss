@@ -1,0 +1,80 @@
+//form
+input {
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  min-height: 1.9rem;
+}
+
+input::placeholder {
+  font-family: 'Retina Light', sans-serif;
+  font-size: 1em;
+  color: $senary;
+  padding-left: 0.3rem;
+}
+
+.s-hidden {
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font: normal 11px/22px Arial, Sans-Serif;
+  font-family: 'DJ5 Escrow Light Display', serif;
+  font-size: 1em;
+  width: 100%;
+}
+.styledSelect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $senary;
+  // padding: 10px 0;
+  width: 100%;
+  font-family: 'DJ5 Escrow Light Display', serif;
+  font-size: 1.1em;
+  text-transform: capitalize;
+}
+.styledSelect:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  top: 10px;
+  right: 6px;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0 0;
+  list-style: none;
+  // border: 1px solid #ccc;
+  background-color: $white;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-height: 200px;
+  overflow-y: scroll;
+}
+.options li {
+  margin: 0 0;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  font-size: 1em;
+}
+.options li:hover {
+  background-color: $quaternary;
+}

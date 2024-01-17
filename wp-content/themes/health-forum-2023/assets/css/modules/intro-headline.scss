@@ -1,0 +1,227 @@
+.intro-section {
+  background-color: $white;
+  padding: 40px 0;
+
+  .intro-max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .single-col-width {
+    max-width: 530px;
+  }
+
+  .two-col-width {
+    max-width: 350px;
+  }
+
+  &__headline {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Escrow Banner Light', serif;
+    font-size: 1.8em;
+    font-weight: 300;
+    @include bp(before_ipad) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @include bp(before_ipad) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--article {
+      text-align: center;
+      padding: 0 25px;
+      max-width: 380px;
+
+      &.col-width-3 {
+        width: 33%;
+      }
+
+      &.col-width-2 {
+        width: 50%;
+      }
+
+      &.col-width-1 {
+        width: 100%;
+      }
+
+      @include bp(before_ipad) {
+        margin-bottom: 20px;
+        max-width: 100%;
+
+        &.col-width-3 {
+          width: 100%;
+        }
+
+        &.col-width-2 {
+          width: 100%;
+        }
+      }
+
+      &.quote-container {
+        max-width: 500px;
+      }
+
+      &__headline {
+        margin-bottom: 18px;
+        font-family: 'Escrow Banner Light', serif;
+        font-size: 1.6em;
+        font-weight: 300;
+        @include bp(before_ipad) {
+          font-size: 1.4em;
+        }
+      }
+
+      &__paragraph {
+        font-family: 'Retina Light';
+        font-size: 1em;
+        line-height: 25px;
+      }
+
+      &__cta {
+        padding-top: 20px;
+
+        &--a {
+          font-family: 'DJ5 Escrow Light Display';
+          color: $secondary;
+          font-size: 1.1em;
+          text-decoration: underline;
+        }
+      }
+
+      &__icon {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        &--icon {
+          max-width: 100px;
+        }
+      }
+
+      &__quotes {
+        font-family: 'Escrow Banner LightItalic';
+        font-size: 1.4em;
+        padding-bottom: 30px;
+        position: relative;
+
+        &:before {
+          content: '\201C';
+          position: absolute;
+          left: -0.5%;
+          margin-left: -4%;
+          font-size: 200%;
+          top: -5%;
+          color: $senary;
+          @include bp(phone) {
+            left: -3%;
+          }
+
+          @include bp(phone_small) {
+            left: -0.5%;
+            margin-left: -1%;
+          }
+        }
+
+        &:after {
+          content: '\201D';
+          font-size: 200%;
+          color: $senary;
+          position: absolute;
+          margin-left: 1%;
+        }
+      }
+
+      &__speaker {
+        &--name {
+          font-family: 'DJ5 Escrow Light Display';
+          padding-bottom: 15px;
+          font-size: 1.3em;
+        }
+
+        &--title {
+          font-family: 'Retina Extra Light';
+          font-size: 1em;
+          padding-bottom: 8px;
+        }
+
+        &--company {
+          font-family: 'Retina Extra Light';
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  &__wrapper-bullet {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  &__bullet-intro {
+    font-family: 'Retina Extra Light';
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.5rem;
+  }
+
+  &__bullet-list-headline {
+    font-family: 'DJ5 Escrow Light Display';
+    font-size: 1em;
+    padding: 40px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__bullet-list {
+    position: relative;
+    list-style: none;
+    counter-reset: item;
+    list-style-position: outside !important;
+    max-width: 430px;
+    margin: auto;
+    @include bp(phone) {
+      padding: 0 20px;
+    }
+  }
+
+  &__bullet {
+    font-family: 'Retina Light';
+    font-size: 1em;
+    padding: 10px 0;
+    counter-increment: item;
+    line-height: 25px;
+    @include bp(phone) {
+      padding: 20px;
+    }
+  }
+
+  &__bullet-title {
+    font-family: 'Retina Light';
+    font-weight: 600;
+  }
+
+  &__bullet:before {
+    margin-right: 10px;
+    content: counter(item);
+    font-family: 'Escrow Banner Light', sans-serif;
+    width: 1.2em;
+    font-size: 1.2em;
+    position: absolute;
+    left: -22px;
+    display: inline-block;
+    @include bp(phone) {
+      left: 3px;
+    }
+  }
+}

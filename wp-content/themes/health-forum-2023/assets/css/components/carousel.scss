@@ -1,0 +1,75 @@
+.carousel {
+  .flickity-button {
+    background: transparent;
+    color: $white;
+
+    &:hover {
+      background: transparent;
+      color: $senary;
+    }
+  }
+}
+
+.past-speakers-cell {
+  min-height: 200px;
+}
+
+.carousel-cell-multiple {
+  display: block;
+  height: auto;
+  /* set min-width, allow images to set cell width */
+  width: 180px;
+  margin-right: 46px;
+  /* vertically center */
+  // top: 50%;
+  // transform: translateY(-50%);
+  padding-top: 5px;
+
+  @include bp(phone) {
+    margin-right: 20px;
+    width: 100%;
+  }
+}
+
+.carousel-cell-single {
+  width: 100%;
+  height: 400px;
+  margin-right: 10px;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .carousel-cell-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.carousel-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 0 35px;
+
+  .custom-carousel-padding {
+    padding: 0 70px;
+  }
+
+  .flickity-page-dots {
+    display: none;
+  }
+
+  &__heading {
+    font-family: 'Escrow Banner Light', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    // color: $white;
+    font-weight: 300;
+  }
+}

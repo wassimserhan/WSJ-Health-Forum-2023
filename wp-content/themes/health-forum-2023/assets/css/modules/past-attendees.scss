@@ -1,0 +1,56 @@
+.attendees {
+  &__headline {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Escrow Banner Light', serif;
+    font-size: 1.8em;
+    font-weight: 300;
+    @include bp(before_ipad) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @include bp(before_ipad) {
+      flex-direction: column;
+    }
+
+    &--article {
+      text-align: left;
+      padding: 0 20px;
+      max-width: 600px;
+
+      @include bp(before_ipad) {
+        margin-bottom: 20px;
+        max-width: 100%;
+      }
+
+      &.quote-container {
+        max-width: 500px;
+      }
+
+      &__headline {
+        margin: 25px 0;
+        font-family: 'Escrow Banner Light', sans-serif;
+        font-size: 1.6em;
+        text-align: center;
+        font-weight: 300;
+      }
+
+      &__list {
+        line-height: 30px;
+      }
+
+      &__paragraph {
+        font-family: 'Retina Extra Light';
+        font-size: 1em;
+        line-height: 25px;
+      }
+    }
+  }
+}

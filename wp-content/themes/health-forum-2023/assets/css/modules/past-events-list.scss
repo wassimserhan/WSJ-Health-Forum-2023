@@ -1,0 +1,48 @@
+.past-events-list {
+  padding-bottom: 40px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list {
+    padding: 20px 0;
+    &:hover {
+      .past-events-list__item-year {
+        color: $secondary;
+      }
+    }
+  }
+
+  &__item-year {
+    color: $black;
+    font-family: "Escrow Banner Light";
+    text-transform: capitalize;
+    font-size: 1.8em;
+    font-weight: 400;
+    @include bp(before_ipad) {
+      font-size: 1.3em;
+    }
+  }
+
+  &__list-underline {
+    position: relative;
+    padding: 12px 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      height: 0;
+      width: 100%;
+      border-bottom: 1px solid $senary;
+      -webkit-transition: width 0.3s ease;
+      transition: width 0.3s ease;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.calendar {
+  position: absolute;
+  right: 90px;
+  top: 0;
+  @include bp(before_ipad) {
+    position: relative;
+    right: 0;
+    top: 0;
+    left: 0;
+  }
+
+  &__title {
+    display: flex;
+    position: relative;
+    padding: 15px 10px;
+    z-index: 3;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--icon {
+      background-image: url(../img/calendar-plus.svg);
+      background-size: 70%;
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+    }
+
+    &--text {
+      font-family: 'Retina Book';
+      letter-spacing: 0.9px;
+      font-size: 0.9em;
+      color: $black;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    z-index: 4;
+    top: 45px;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      text-align: left;
+      padding: 12px 0;
+      background-color: $white;
+      border: 1px solid $senary;
+      border-radius: 0.25rem;
+      min-width: 144px;
+      &--item {
+        color: $black;
+        padding: 5px 20px;
+
+        &:hover {
+          background-color: $lightgray;
+        }
+      }
+    }
+  }
+}

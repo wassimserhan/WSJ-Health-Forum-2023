@@ -1,0 +1,75 @@
+.gallery-slides {
+  padding: 45px 0;
+
+  .carousel-wrapper__heading {
+    color: $black;
+    padding-bottom: 25px;
+  }
+
+  .carousel-wrapper {
+    padding: 0;
+    max-width: 930px;
+
+    .flickity-prev-next-button.previous {
+      left: -50px;
+    }
+    .flickity-prev-next-button.next {
+      right: -50px;
+    }
+
+    .carousel .flickity-button {
+      color: $black;
+    }
+
+    .carousel-cell-gallery {
+      height: initial;
+      width: calc((100% - 20px) / 3);
+      margin-right: 10px;
+      @include bp(ipad_pro) {
+        width: calc((100% - 10px) / 2);
+      }
+      @include bp(before_ipad) {
+        width: calc((100%));
+      }
+    }
+
+    .flickity-viewport {
+      transition: height 0.2s;
+    }
+  }
+
+  .carousel {
+    margin: 0 auto;
+  }
+
+  &__container {
+    width: 100%;
+    position: relative;
+
+    @include bp(before_ipad) {
+      height: auto;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      &__fig {
+        height: 300px;
+        margin: 0;
+        margin-bottom: 10px;
+        @include bp(ipad_pro) {
+          height: 250px;
+        }
+        @include bp(before_ipad) {
+          height: initial;
+        }
+
+        &--image {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
